@@ -1,0 +1,8 @@
+Run:
+
+npm install
+
+node initdb.js
+
+node app.js
+

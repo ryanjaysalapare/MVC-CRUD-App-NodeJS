@@ -1,0 +1,19 @@
+{
+  "name": "multipagemvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-mustache": "^1.0.4",
+    "express-session": "^1.17.3",
+    "mustache-express": "^1.3.2",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.0.11"
+  }
+}
