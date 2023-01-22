@@ -1,0 +1,64 @@
+{{! StAuth10222: I Ryan Jay Salapare, 000823653 certify that this material is my original work. 
+  No other person's work has been used without due acknowledgement. 
+  I have not made my work available to anyone else. }}
+
+{{>header}}
+
+{{>navigation}}
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Editors</h2>
+      <p>Only editors should be able to view this page!</p>
+ 
+      <div class="col">
+        <h4>Users</h4>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Password</th>
+              <th scope="col">Level</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#users}}
+              <tr>
+                <td>{{username}}</td>
+                <td>{{password}}</td>
+                <td>{{level}}</td>
+                <td><a href="editors/deleteSpecificArticle/{{rowid}}/{{username}}">D</a></td>
+              </tr>
+            {{/users}}
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+          <h4>Articles</h4>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#articles}}
+                <tr>
+                  <td>{{title}}</td>
+                  <td>{{username}}</td>
+                  <td><a href="editors/deletearticle/{{rowid}}">D</a></td>
+                </tr>
+              {{/articles}}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+  {{>sidebar}}
+</div>
+
+{{>footer}}

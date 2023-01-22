@@ -1,0 +1,33 @@
+{{! StAuth10222: I Ryan Jay Salapare, 000823653 certify that this material is my original work. 
+  No other person's work has been used without due acknowledgement. 
+  I have not made my work available to anyone else. }}
+  
+{{>header}}
+
+{{>navigation}}
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Sign-up for an account</h2>
+    {{#isnotblank}}
+        <p style="color:red;">{{ signuperror }}</p>
+    {{/isnotblank}}
+    {{#isaccountcreated}}
+        <p><b>{{ signupmessage1 }}</b> <a href="/login">{{ signupmessage2 }}</a> {{ signupmessage3 }}</p>
+    {{/isaccountcreated}}
+      <form action="/login/signup/attempttosignup" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username"> <br /> <br />
+        <label for="password">Password:</label>
+        <input type="text" name="password"> <br /> <br />
+        <input type="submit" value="Sign-up">
+      </form> <br />
+    </div>
+  </div>
+
+  {{>sidebar}}
+
+</div>
+
+{{>footer}}

@@ -1,0 +1,30 @@
+{{! StAuth10222: I Ryan Jay Salapare, 000823653 certify that this material is my original work. 
+  No other person's work has been used without due acknowledgement. 
+  I have not made my work available to anyone else. }}
+
+{{>header}}
+
+{{>navigation}}
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Members</h2>
+      <p>Public users shouldn't be able to see this page.  This page will
+         allow logged-in users (members and editors) to create articles.</p>
+      <p><strong>{{ message }}</strong></p>
+      <h3>Create an article</h3>
+      <form action="/members/create" method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="title"> <br /> <br />
+        <textarea rows="5" cols="80" name="content"> </textarea> <br />
+        <input type="submit">
+      </form>
+    </div>
+  </div>
+
+  {{>sidebar}}
+
+</div>
+
+{{>footer}}

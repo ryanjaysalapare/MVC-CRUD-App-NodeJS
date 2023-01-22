@@ -1,0 +1,16 @@
+{{! StAuth10222: I Ryan Jay Salapare, 000823653 certify that this material is my original work. 
+  No other person's work has been used without due acknowledgement. 
+  I have not made my work available to anyone else. }}
+  
+<div class="topnav">
+  <a href="/home" {{#homenav}}class="curnav"{{/homenav}}>Home</a>
+  <a href="/articles" {{#articlesnav}}class="curnav"{{/articlesnav}}>Articles</a>
+  <a href="/members" {{#membersnav}}class="curnav"{{/membersnav}}>Members</a>
+  <a href="/editors" {{#editorsnav}}class="curnav"{{/editorsnav}}>Editors</a>
+  {{#displaylogin}}
+    <a href="/login" {{#loginnav}}class="curnav"{{/loginnav}}>Login</a>
+  {{/displaylogin}}
+  {{#displaylogout}}
+    <a href="/login/logout">Logout</a>
+  {{/displaylogout}}
+</div>
